@@ -22,19 +22,19 @@ Plugin 'thirtythreeforty/lessspace.vim'
 " LaTeX editing
 " Plugin 'LaTeX-Box-Team/LaTeX-Box'
 " Status bar mods
-Plugin 'vim-airline/vim-airline'
-Plugin 'airblade/vim-gitgutter'
+" Plugin 'vim-airline/vim-airline'
+" Plugin 'airblade/vim-gitgutter'
 " Tab completion
 " Plugin 'ervandew/supertab'
 " Code Folding
-Plugin 'tmhedberg/SimpylFold'
+" Plugin 'tmhedberg/SimpylFold'
 " Auto-Indentation
 Plugin 'vim-scripts/indentpython.vim'
 " Syntax Checking/Highlighting
 "Plugin 'vim-syntastic/syntastic'
 Plugin 'nvie/vim-flake8'
 " Color Schemes
-Plugin 'chriskempson/base16-vim'
+" Plugin 'chriskempson/base16-vim'
 " File Browsing
 Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
@@ -42,7 +42,7 @@ Plugin 'Xuyuanp/nerdtree-git-plugin'
 " Git Integration
 Plugin 'tpope/vim-fugitive'
 " Vim-airline Themes
-Plugin 'vim-airline/vim-airline-themes'
+" Plugin 'vim-airline/vim-airline-themes'
 " Tagbar
 Plugin 'majutsushi/tagbar'
 " Python Mode
@@ -53,9 +53,10 @@ Plugin 'jmcantrell/vim-virtualenv'
 " Auto-close bracket...
 Plugin 'Raimondi/delimitMate'
 " Solarized color
-Plugin 'altercation/vim-colors-solarized'
+" Plugin 'altercation/vim-colors-solarized'
+Plugin 'Solarized'
 " Fuzzy search
-Plugin 'junegunn/fzf'
+" Plugin 'junegunn/fzf'
 " Vim ansible yaml
 Plugin 'chase/vim-ansible-yaml'
 
@@ -94,7 +95,7 @@ set completeopt=menuone,preview,noinsert
 " Let vim-gitgutter do its thing on large files
 let g:gitgutter_max_signs=10000
 
-let g:airline_powerline_fonts = 1
+" let g:airline_powerline_fonts = 1
 let g:markdown_fenced_languages = ['html', 'python', 'bash=sh']
 
 " If your terminal's background is white (light theme), uncomment the following
@@ -112,17 +113,17 @@ set shiftwidth=4 tabstop=4 softtabstop=4 expandtab autoindent
 let python_highlight_all = 1
 
 """" Color Schemes """"""
-set background=light
 try
     colorscheme solarized
 catch
 endtry
+set background=light
 set t_Co=256
 
-let base16colorspace=256
+" let base16colorspace=256
 
 """" Airline Theme """"""
-let g:airline_theme = 'dark'
+" let g:airline_theme = 'dark'
 
 """"""" Keybindings """""""
 " Set up leaders
@@ -181,3 +182,10 @@ set wrap
 " Super useful! From an idea by Michael Naumann
 vnoremap <silent> * :call VisualSelection('f', '')<CR>
 vnoremap <silent> # :call VisualSelection('b', '')<CR>
+" Returns true if paste mode is enabled
+function! HasPaste()
+    if &paste
+        return 'PASTE MODE  '
+    endif
+    return ''
+endfunction
