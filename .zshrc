@@ -8,9 +8,13 @@ export ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="agnoster"
 
 plugins=(
-  git
-  autopep8
   docker
+  docker-compose
+  docker-machine
+  heroku
+  kops
+  kubectl
+  git
   github
   httpie
   pip
@@ -22,9 +26,7 @@ plugins=(
   zsh-autosuggestions
   zsh-completions
   zsh-syntax-highlighting
-  bundler
   dotenv
-  osx
 )
 
 # Uncomment the following line to use case-sensitive completion.
@@ -97,5 +99,5 @@ done;
 unset file;
 
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-fpath=(/usr/local/share/zsh-completions $fpath)
+fpath=(/usr/local/share/zsh-completions ~/.oh-my-zsh/plugins/docker $fpath)
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
