@@ -1,2 +1,1 @@
-# dotfiles
-My dotfiles
+My dotfiles - inspired a lot from mathiasbynens dotfiles, for both Mac and Ubuntu machine.

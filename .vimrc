@@ -13,16 +13,11 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'easymotion/vim-easymotion'
 " Ctrl-P - Fuzzy file search
 Plugin 'kien/ctrlp.vim'
-" Autocomplete for python
-" This plugin cache a lot of thing and make vim start slowly
-" Therefore I decided to turn it off.
-" Plugin 'davidhalter/jedi-vim'
 " Remove extraneous whitespace when edit mode is exited
 Plugin 'thirtythreeforty/lessspace.vim'
 " LaTeX editing
 " Plugin 'LaTeX-Box-Team/LaTeX-Box'
 " Status bar mods
-" Plugin 'vim-airline/vim-airline'
 " Plugin 'airblade/vim-gitgutter'
 " Tab completion
 " Plugin 'ervandew/supertab'
@@ -33,8 +28,6 @@ Plugin 'vim-scripts/indentpython.vim'
 " Syntax Checking/Highlighting
 "Plugin 'vim-syntastic/syntastic'
 Plugin 'nvie/vim-flake8'
-" Color Schemes
-" Plugin 'chriskempson/base16-vim'
 " File Browsing
 Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
@@ -63,11 +56,6 @@ Plugin 'chase/vim-ansible-yaml'
 " After all plugins...
 call vundle#end()
 filetype plugin indent on
-
-""""""" Jedi-VIM """""""
-" Don't mess up undo history
-" let g:jedi#show_call_signatures = "0"
-
 
 """"""" General coding stuff """""""
 set list
@@ -119,11 +107,6 @@ catch
 endtry
 set background=light
 set t_Co=256
-
-" let base16colorspace=256
-
-"""" Airline Theme """"""
-" let g:airline_theme = 'dark'
 
 """"""" Keybindings """""""
 " Set up leaders
@@ -178,6 +161,10 @@ set ffs=unix,dos,mac
 set ai
 set si
 set wrap
+" Highlight current line
+set cursorline
+" Show “invisible” characters
+set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
 " Visual mode pressing * or # searches for the current selection
 " Super useful! From an idea by Michael Naumann
 vnoremap <silent> * :call VisualSelection('f', '')<CR>
