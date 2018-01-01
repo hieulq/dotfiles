@@ -38,6 +38,9 @@ if [ "$(uname)" == "Darwin" ]; then
 
     # Install oh-my-zsh
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+    sudo chmod go-w '/usr/local/share'
+    rm -f ~/.zcompdump*
+    compinit
 elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
     # Install powerline patched-fonts
     sudo apt-get install fonts-powerline
