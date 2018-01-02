@@ -52,7 +52,7 @@ elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
     # Install hh and zsh
     sudo add-apt-repository ppa:ultradvorka/ppa -y
     sudo apt-get update 
-    sudo apt-get install zsh thefuck hh -y
+    sudo apt-get install zsh thefuck tree hh -y
 
     # Install powerline patched-fonts
     # source powerline-install.sh
