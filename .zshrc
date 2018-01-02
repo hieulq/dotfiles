@@ -77,9 +77,6 @@ HIST_STAMPS="dd/mm/yyyy"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(composer git git-extras httpie github npm sublime vagrant laravel5)
 
-# Activate Oh-My-Zsh
-source $ZSH/oh-my-zsh.sh
-
 # You may need to manually set your language environment
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
@@ -178,6 +175,9 @@ POWERLEVEL9K_ROOT_ICON=$'\uF198'
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
+
+# Activate Oh-My-Zsh
+source $ZSH/oh-my-zsh.sh
 
 for file in ~/.{exports,aliases,functions}; do
 	[ -r "$file" ] && [ -f "$file" ] && source "$file";
