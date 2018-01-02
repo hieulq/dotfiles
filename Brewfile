@@ -52,6 +52,7 @@ cask 'sublime-text'
 cask 'vagrant'
 cask 'virtualbox'
 cask 'virtualbox-extension-pack'
+cask 'font-hack-nerd-font'
 
 # Quicklook
 cask 'qlcolorcode'

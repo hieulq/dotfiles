@@ -186,3 +186,15 @@
 [url "git://gist.github.com/"]
 
 	insteadOf = "gist:"
+
+[gitreview]
+	
+	username = hieulq
+
+[user]
+	
+	name = Hieu LE
+
+[remote "gerrit"]
+
+    fetch = +refs/heads/*:refs/remotes/gerrit/*
