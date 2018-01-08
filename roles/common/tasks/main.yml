@@ -1,2 +1,5 @@
 ---
-# tasks file for common
+- import_tasks: ubuntu.yml
+  when: ansible_distribution == 'Ubuntu'
+- import_tasks: macos.yml
+  when: ansible_distribution == 'MacOSX'
