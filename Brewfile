@@ -29,6 +29,8 @@ brew 'bash-completion2'
 
 # Install Binaries
 brew 'awscli'
+brew 'ranger'
+brew 'mackup'
 brew 'git'
 brew 'hub'
 brew 'grep'
